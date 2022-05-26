@@ -1,6 +1,10 @@
 module Main where
 
+import System.IO
+
 import Lib
 
 main :: IO ()
-main = start
+main = do
+    hSetBuffering stdout LineBuffering
+    start
